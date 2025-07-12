@@ -1,3 +1,11 @@
+# Introduction
+This project of Advanced Data Mining for Data-Driven insights and Predictive Modeling will guide through different key stages of the data mining process as mentioned below in 4 different deliverable parts.
+
+* Deliverable 1: Data Collection, Cleaning, and Exploration
+* Deliverable 2: Regression Modeling and Performance Evaluation
+* Deliverable 3: Classification, Clustering, and Pattern Mining
+* Deliverable 4: Final Insights, Recommendations, and Presentation
+
 # Group Members
 
 * Nischal Joshi
@@ -5,9 +13,12 @@
 * Murali Krishna
 * Santhosh Ramachandran
 
-# Data-Driven-Insights-and-Predictive-Modeling
 
-## Dataset Summary:
+# Deliverable 1: Data Collection, Cleaning, and Exploration
+
+## Data-Driven-Insights-and-Predictive-Modeling
+
+### Dataset Summary:
 
 The data set consists of medical attributes gathered from patients in order to forecast the severity of heart disease. There are 16 main attributes like age, sex, chest pain type (cp), blood pressure (trestbps), cholesterol(chol), fasting blood sugar (fbs), resting ECG results (restecg), maximal heart rate achieved (thalach), exercise-induced angina (exang), ST depression (old peak),  slope of the peak exercise (slope), major number of blood vessles (ca) and thalassemia (thal),  predicated attribute(num).
 
@@ -23,7 +34,7 @@ The data set consists of medical attributes gathered from patients in order to f
 - **Columns**: 16
 - **Source**: Kaggle
 
-## Data Cleaning Used:
+### Data Cleaning Used:
 
 * **For Duplicates**:
 
