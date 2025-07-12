@@ -365,6 +365,3 @@ Developed and visualized a **clustering model (K-Means)**
 Identified and explained patient groups based on feature similarity  
 Applied **FP-Growth** to find significant association rules predicting heart disease  
 Provided actionable insights applicable in medical settings
-
----
->>>>>>> a600b99c2f8d9549afcf066f59a09992a0fc2148
