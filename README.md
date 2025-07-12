@@ -173,7 +173,6 @@ Summary of decision tree,
 * We achieved accuracy of : ~79%
 =======
 * We achieved accuracy of: ~79%
->>>>>>> 56fccf0ae59d5acf0aa59543264d942b9c407ebd
 * Confusion matrix, ROC curve, and tree visualization were generated to evaluate performance.
 
 ### 📈 Model Performance Comparison
@@ -185,7 +184,6 @@ Summary of decision tree,
 
 Both models were effective in identifying patients at risk of heart disease,
 with **k-NN showing slightly higher accuracy** in this dataset.
-<<<<<<< HEAD
 =======
 
 ## Hyperparameter Tuning of Classification Models
