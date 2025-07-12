@@ -14,13 +14,12 @@ The data set consists of medical attributes gathered from patients in order to f
 **Key Insights from Analysis**
 
 - The majority of patients belong to the age group of between 40 and 60 years.
-- Males show a higher frequency of heart disease in this dataset.
-- Chest pain type (`cp`), maximum heart rate achieved (`thalach`), and exercise-induced angina (`exang`) show strong correlation with heart disease.
-- Cholesterol and resting blood pressure show weak correlation with the target variable.
-- Class distribution of the `target` variable is relatively balanced, allowing for straightforward binary classification.
-
-**Rows**: 303
-
+- Males showed a higher frequency of  heart disease.
+- Columns with *few missing values* (e.g., restecg, chol) can be imputed (mean/median/mode).
+- Columns with *moderate missingness* (e.g., oldpeak, thalch, exang) can also be imputed if meaningful.
+- Columns with *high missingness* (e.g., ca, thal, slope) may need to be dropped or carefully analyzed since much of the data is missing.
+  
+- **Rows**: 920
 - **Columns**: 16
 - **Source**: Kaggle
 
@@ -56,4 +55,5 @@ The data set consists of medical attributes gathered from patients in order to f
   * Selection of  the appropiate dataset from the kaggle.
     * Initial we worked in titanic dataset however it lacked the numerical attributes which is essential for further computation.
     * Later we worked with heart disease data set with a lot of numerical data.
-  *
+  * Several columns in the dataset (e.g., trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal) contained missing values — some with very high missing rates (e.g., ca, thal, slope). This posed a  risk of losing too much data if all rows with missing values were dropped.
+  * Outliers and unrealistic values were presnet in the numeric columns (age, chol) could bias the models and reduce performance.
