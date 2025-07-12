@@ -239,7 +239,79 @@ We performed **hyperparameter tuning** for both **k-Nearest Neighbors (k-NN)** a
 - k-NN achieved higher test accuracy and F1 score compared to Decision Tree on this dataset.
 - ROC curves and confusion matrices were plotted to visualize model performance.
 
+## Clustering and Association Rule Mining Summary
 
+### Clustering with K-Means
 
+We implemented a **K-Means clustering model** to identify natural groupings in the dataset based on patient attributes.
 
->>>>>>> 56fccf0ae59d5acf0aa59543264d942b9c407ebd
+### Model Details:
+- Scaled the dataset using `StandardScaler`.
+- Applied K-Means with `n_clusters=5` and `random_state=42`.
+- Assigned cluster labels to each patient in the dataset.
+
+### Visualization:
+To visualize the clusters:
+- Performed PCA to reduce dimensions to 2D.
+- Plotted the clusters using a scatter plot, with cluster centroids marked as black 'X'.
+
+![K-Means Clustering](kmeans_clusters.png)
+
+The clusters represent distinct patient profiles based on features such as age, blood pressure, cholesterol, etc. These groupings can help medical practitioners target specific risk groups for preventive measures.
+
+---
+
+## Association Rule Mining with FP-Growth
+
+We applied **Frequent Pattern Growth (FP-Growth)** to discover meaningful patterns between patient characteristics and heart disease.
+
+### Steps:
+- Converted relevant features into binary (0/1) representation.
+- Created derived attributes such as:
+  - Age > 60
+  - Blood pressure > 130
+  - Cholesterol > 240
+  - Maximum heart rate < 150
+  - Presence of disease (`HasDisease`)
+- Applied FP-Growth with a minimum support of 0.2.
+- Extracted association rules with confidence ≥ 0.6 and focused on rules where the consequent includes `HasDisease`.
+
+### Example Rules:
+| Antecedents                | Consequent   | Support | Confidence | Lift  |
+|----------------------------|--------------|---------|------------|-------|
+| BP>130                     | HasDisease   | 0.31    | 0.70       | 1.09 |
+| Male, BP>130               | HasDisease   | 0.27    | 0.78       | 1.22 |
+| Thalach<150, BP>130        | HasDisease   | 0.25    | 0.85       | 1.33 |
+| Thalach<150, Male, BP>130  | HasDisease   | 0.22    | 0.90       | 1.39 |
+
+### Visualizations:
+- **Top 10 Rules by Lift:** Bar chart of strongest rules.
+- **Network Graph:** Directed graph of antecedents → consequent with edge weight representing lift.
+- **Support vs Confidence:** Scatter plot with lift shown as color gradient.
+
+![Association Graph](association_rules_graph.png)
+
+---
+
+## Real-World Insights
+
+The discovered patterns highlight important risk factors for heart disease:
+- Patients with **high blood pressure** and **maximum heart rate < 150** are at much higher risk.
+- Male patients with these risk factors have even higher likelihood of disease.
+
+These insights can assist healthcare providers in:
+- Prioritizing screening and intervention for high-risk patients.
+- Designing targeted awareness campaigns and lifestyle interventions.
+- Informing policy decisions on resource allocation for preventive care.
+
+---
+
+## Conclusion
+
+We successfully:
+✅ Developed and visualized a **clustering model (K-Means)**  
+✅ Identified and explained patient groups based on feature similarity  
+✅ Applied **FP-Growth** to find significant association rules predicting heart disease  
+✅ Provided actionable insights applicable in medical settings
+
+---
