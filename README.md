@@ -88,6 +88,21 @@ Classification is a type of data analysis that extracts models describing data c
 
 Models implemented here are KNN (K Nearest Neighbors) and Decision Tree. 
 
+### k-Nearest Neighbors (k-NN)
+* KNN is a distance-based classifier that assigns a data point to the majority class among its k nearest neighbors.
+* Operates on the principle that similar data points tend to belong to the same class.
+* Tested for multiple k values to find optimal accuracy
+* Sample code
+  ```python
+    from sklearn.neighbors import KNeighborsClassifier
+
+    knn = KNeighborsClassifier(n_neighbors=5)
+    knn.fit(X_train, y_train)
+    y_pred = knn.predict(X_test)
+
+* Best accuracy achieved: ~84% (at k=5 or higher)
+* Evaluated using accuracy, confusion matrix, and ROC curve.
+
 ### Decision Tree
 A Decision Tree is a flowchart-like tree structure where:
 * Each internal (non-leaf) node represents a decision based on an attribute.
@@ -134,5 +149,18 @@ A Decision Tree is a flowchart-like tree structure where:
       filled=True
   )
 
+Summary of decision tree,
+* We achieved accuracy of : ~79%
+* Confusion matrix, ROC curve, and tree visualization were generated to evaluate performance.
 
-#
+### 📈 Model Performance Comparison
+
+| Model                  | Accuracy |
+|-------------------------|----------|
+| Decision Tree           | ~79%     |
+| k-Nearest Neighbors (k-NN) | ~84%     |
+
+Both models were effective in identifying patients at risk of heart disease,  
+with **k-NN showing slightly higher accuracy** in this dataset.
+
+
