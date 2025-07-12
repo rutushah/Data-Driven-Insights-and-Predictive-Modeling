@@ -150,7 +150,7 @@ A Decision Tree is a flowchart-like tree structure where:
   )
 
 Summary of decision tree,
-* We achieved accuracy of : ~79%
+* We achieved accuracy of: ~79%
 * Confusion matrix, ROC curve, and tree visualization were generated to evaluate performance.
 
 ### 📈 Model Performance Comparison
@@ -162,5 +162,58 @@ Summary of decision tree,
 
 Both models were effective in identifying patients at risk of heart disease,  
 with **k-NN showing slightly higher accuracy** in this dataset.
+
+## Hyperparameter Tuning of Classification Models
+
+We performed **hyperparameter tuning** for both **k-Nearest Neighbors (k-NN)** and **Decision Tree** classifiers using `GridSearchCV` to optimize their performance.
+
+### k-Nearest Neighbors (k-NN)
+
+- Parameter grid tested:
+  - `n_neighbors`: [3, 5, 7, 9]
+  - `weights`: ['uniform', 'distance']
+  - `metric`: ['euclidean', 'manhattan']
+
+- Best Parameters:
+  - `n_neighbors`: 7
+  - `weights`: distance
+  - `metric`: manhattan
+
+- Best cross-validated score: **~0.877**
+
+- Final evaluation on test data:
+  - **Accuracy:** 0.841
+  - **Precision:** 0.882
+  - **Recall:** 0.882
+  - **F1 Score:** 0.882
+
+### Decision Tree
+
+- Parameter grid tested:
+  - `max_depth`: [3, 5, 10, None]
+  - `min_samples_split`: [2, 5, 10]
+  - `criterion`: ['gini', 'entropy']
+
+- Best Parameters:
+  - `max_depth`: 3
+  - `min_samples_split`: 2
+  - `criterion`: gini
+
+- Best cross-validated score: **~0.831**
+
+- Final evaluation on test data:
+  - **Accuracy:** 0.781
+  - **Precision:** 0.856
+  - **Recall:** 0.814
+  - **F1 Score:** 0.834
+
+---
+
+###  Insights for hyperparameter
+- Hyperparameter tuning improved the performance of both models.
+- k-NN achieved higher test accuracy and F1 score compared to Decision Tree on this dataset.
+- ROC curves and confusion matrices were plotted to visualize model performance.
+
+
 
 
