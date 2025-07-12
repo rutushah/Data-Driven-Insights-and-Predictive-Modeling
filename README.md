@@ -72,5 +72,56 @@ The data set consists of medical attributes gathered from patients in order to f
 # Deliverable 2: Regression Modeling and Performance Evaluation
  
 # Deliverable 3: Classification, Clustering, and Pattern Mining
+For this deliverable we have covered following concepts as mentioned below
 
-##
+* Classification Models
+* hyperparameter tuning
+* Evaluation of Classification model
+* Clustering model and its visualization
+* Association of Rule Mining Techniques
+* Insights on how these patterns can be applied in real world
+
+## Classification Models
+
+### What is Classification?
+Classification is a type of data analysis that extracts models describing data classes. These models are used to predict the class labels for new, unseen data points based on their features. In this project, we used a heart disease dataset to determine whether a patient is likely to have heart disease or not (binary classification: 0 = No Disease, 1 = Disease).
+
+Models implemented here are KNN (K Nearest Neighbors) and Decision Tree. 
+
+### Decision Tree
+A Decision Tree is a flowchart-like tree structure where:
+* Each internal (non-leaf) node represents a decision based on an attribute.
+* Each branch represents the outcome of the test.
+* Each leaf node represents a class label (target value).
+* The root node is the starting point of the decision process.
+
+* We have used the decision tree classifier from scikit-learn.
+  ```python
+  from sklearn.tree import DecisionTreeClassifier
+
+  classifier = DecisionTreeClassifier()
+
+* Train the classifier on the training dataset as mentioned below
+    ```python
+      classifier.fit(X_train, y_train)
+    
+* Predicted the outcomes for the test dataset.
+  ```python
+  classifier_y_pred = classifier.predict(X_test)
+
+* Used evaluation metrics such as the confusion matrix and accuracy score.
+  ```python
+  from sklearn.metrics import confusion_matrix, accuracy_score
+
+  print(confusion_matrix(y_test, classifier_y_pred))
+  print('Accuracy:', accuracy_score(y_test, classifier_y_pred))
+
+* Printed the decision tree rules in text form.
+  ```python
+    from sklearn import tree
+    text_representation = tree.export_text(classifier)
+    print(text_representation)
+Sample output:
+  ```python
+    
+
