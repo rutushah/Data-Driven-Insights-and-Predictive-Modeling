@@ -121,7 +121,6 @@ A Decision Tree is a flowchart-like tree structure where:
     from sklearn import tree
     text_representation = tree.export_text(classifier)
     print(text_representation)
-Sample output:
-  ```python
+
     
 
