@@ -73,6 +73,13 @@ The data set consists of medical attributes gathered from patients in order to f
 
 # Deliverable 2: Regression Modeling and Performance Evaluation
 
+For this deliverable, we have performed Regression modeling and performance evaluation covering below mentioned features
+
+* Preprocessing and Feature Engineering
+* Regression Models such as Linear Regression, Multiple Regression, and Ridge Regression Models
+* Cross-validation techniques and
+* Insights and Challenges faced
+
 ## Modeling Process
 
 ### 1. **Preprocessing and Feature Engineering**
@@ -88,12 +95,15 @@ The data set consists of medical attributes gathered from patients in order to f
 - **Linear Regression**: A baseline regression model used for initial performance evaluation.
 - **Ridge Regression**: A regularized model which adds L2 penalty to reduce model the complexity and improve generalization.
 
-## Linear Regression Results:
+### Linear Regression Results:
 
 - **R² Score**: 0.2630
 - **MSE**: 396.92
 - **RMSE**: 19.92
 - **MAE**: 15.99
+
+### Multiple Regression Results:
+//TODO:
 
 ### Ridge Regression Results:
 
