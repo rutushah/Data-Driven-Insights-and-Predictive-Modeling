@@ -68,3 +68,9 @@ The data set consists of medical attributes gathered from patients in order to f
     * Later we worked with heart disease data set with a lot of numerical data.
   * Several columns in the dataset (e.g., trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal) contained missing values — some with very high missing rates (e.g., ca, thal, slope). This posed a  risk of losing too much data if all rows with missing values were dropped.
   * Outliers and unrealistic values were present in the numeric columns (age, chol) could bias the models and reduce performance.
+ 
+# Deliverable 2: Regression Modeling and Performance Evaluation
+ 
+# Deliverable 3: Classification, Clustering, and Pattern Mining
+
+##
