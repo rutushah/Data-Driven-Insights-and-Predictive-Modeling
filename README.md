@@ -122,5 +122,17 @@ A Decision Tree is a flowchart-like tree structure where:
     text_representation = tree.export_text(classifier)
     print(text_representation)
 
-    
+* Tree plot visualization
+  ```python
+  import matplotlib.pyplot as plt
 
+  fig = plt.figure(figsize=(50,45))
+  _ = tree.plot_tree(
+      classifier,
+      feature_names=feature_names,
+      class_names=target_name,
+      filled=True
+  )
+
+
+#
