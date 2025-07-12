@@ -73,7 +73,7 @@ The data set consists of medical attributes gathered from patients in order to f
 
 # Deliverable 2: Regression Modeling and Performance Evaluation
 
-For this deliverable, we have performed Regression modeling and performance evaluation covering below mentioned features
+For this deliverable, following steps were taken
 
 * Preprocessing and Feature Engineering
 * Regression Models such as Linear Regression, Multiple Regression, and Ridge Regression Models
@@ -239,10 +239,6 @@ Summary of decision tree
 
 Both models were effective in identifying patients at risk of heart disease,
 with **k-NN showing slightly higher accuracy** in this dataset.
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a600b99c2f8d9549afcf066f59a09992a0fc2148
 
 ## Hyperparameter Tuning of Classification Models
 
@@ -288,7 +284,6 @@ We performed **hyperparameter tuning** for both **k-Nearest Neighbors (k-NN)** a
   - **Recall:** 0.814
   - **F1 Score:** 0.834
 
----
 
 ### Insights for hyperparameter
 
@@ -296,15 +291,6 @@ We performed **hyperparameter tuning** for both **k-Nearest Neighbors (k-NN)** a
 - k-NN achieved higher test accuracy and F1 score compared to Decision Tree on this dataset.
 - ROC curves and confusion matrices were plotted to visualize model performance.
 
-<<<<<<< HEAD
->>>>>>> 56fccf0ae59d5acf0aa59543264d942b9c407ebd
->>>>>>>
->>>>>>
->>>>>
->>>>
->>>
->>
-=======
 ## Clustering and Association Rule Mining Summary
 
 ### Clustering with K-Means
@@ -375,10 +361,10 @@ These insights can assist healthcare providers in:
 ## Conclusion
 
 We successfully:
-✅ Developed and visualized a **clustering model (K-Means)**  
-✅ Identified and explained patient groups based on feature similarity  
-✅ Applied **FP-Growth** to find significant association rules predicting heart disease  
-✅ Provided actionable insights applicable in medical settings
+Developed and visualized a **clustering model (K-Means)**  
+Identified and explained patient groups based on feature similarity  
+Applied **FP-Growth** to find significant association rules predicting heart disease  
+Provided actionable insights applicable in medical settings
 
 ---
 >>>>>>> a600b99c2f8d9549afcf066f59a09992a0fc2148
