@@ -49,19 +49,22 @@ The data set consists of medical attributes gathered from patients in order to f
     * slope: 309
     * ca: 611
     * thal: 486
+      
 * **For Duplicates**:
 
   * Detected using `df.duplicated()`
   * Removed duplicates using `df.drop_duplicates()`
+    
 * **For Data Exploration**:
 
   * Verified and corrected the data where necessary using `df.info()` and `df.astype()`.
+    
 * **Outliers and Noise**:
 
   * Visualized distributions using histograms and boxplots
   * Noted some outliers in cholesterol and max heart rate which were retained for modeling context
+    
 * **Challenges Faced:**
-
   * Selection of  the appropiate dataset from the kaggle.
     * Initial we worked in titanic dataset however it lacked the numerical attributes which is essential for further computation.
     * Later we worked with heart disease data set with a lot of numerical data.
