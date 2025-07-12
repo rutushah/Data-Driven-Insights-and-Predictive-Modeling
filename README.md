@@ -71,63 +71,83 @@ The data set consists of medical attributes gathered from patients in order to f
   * Several columns in the dataset (e.g., trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal) contained missing values — some with very high missing rates (e.g., ca, thal, slope). This posed a  risk of losing too much data if all rows with missing values were dropped.
   * Outliers and unrealistic values were present in the numeric columns (age, chol) could bias the models and reduce performance.
 
-# Deliverable 2: Regression Modeling and Performance Evaluation
+### Deliverable 2: Regression Modeling and Performance Evaluation
 
-For this deliverable, following steps were taken
+### Overview
 
-* Preprocessing and Feature Engineering
-* Regression Models such as Linear Regression, Multiple Regression, and Ridge Regression Models
-* Cross-validation techniques and
-* Insights and Challenges faced
+In this deliverable, we focused on building and evaluating regression models to predict the target variable (`thalch`) using patient health attributes. The key steps involved data preprocessing, feature engineering, implementation of multiple regression techniques, and performance evaluation using cross-validation.
 
-## Modeling Process
+---
 
-### 1. **Preprocessing and Feature Engineering**
+### 1. Preprocessing and Feature Engineering
 
-- Unnecessay and irrelevant columns like `id`, `dataset`, and `target` were removed.
-- Mean Strategy is used to fill in the missing values
-- All  the numerical attributes were scaled with the help of  StandardScaler to normalize the input space.
-- Categorical features were detected and one-hot encoded.
-- The final dataset was split into training (80%) and testing (20%) sets.
+- Removed unnecessary columns such as `id`, `dataset`, and `target`.
+- Imputed missing values using the **mean strategy**.
+- Applied **StandardScaler** to normalize numerical attributes.
+- One-hot encoded categorical variables for model compatibility.
+- Split the data into **80% training** and **20% testing** sets.
 
-### 2. **Regression Models Built**
+---
 
-- **Linear Regression**: A baseline regression model used for initial performance evaluation.
-- **Ridge Regression**: A regularized model which adds L2 penalty to reduce model the complexity and improve generalization.
+### 2. Regression Models Implemented
 
-### Linear Regression Results:
+| Model                     | Description |
+|--------------------------|-------------|
+| **Linear Regression**     | Baseline model for initial evaluation. |
+| **Ridge Regression**      | Regularized linear model using L2 penalty to improve generalization. |
+| **Decision Tree Regressor** | Non-linear model partitioning the data into regions. |
+| **Random Forest Regressor** | Ensemble method combining multiple trees for stable predictions. |
+| **Gradient Boosting Regressor** | Sequential ensemble that improves iteratively over errors. |
 
-- **R² Score**: 0.2630
-- **MSE**: 396.92
-- **RMSE**: 19.92
-- **MAE**: 15.99
+---
 
-### Multiple Regression Results:
-//TODO:
+### 3. Model Performance (Test Set)
 
-### Ridge Regression Results:
+| Model                   | R² Score | MSE    | RMSE   | MAE   |
+|------------------------|----------|--------|--------|--------|
+| Linear Regression      | 0.2630   | 396.92 | 19.92  | 15.99  |
+| Ridge Regression       | 0.2634   | 396.72 | 19.91  | 15.99  |
+| Decision Tree Regressor| -0.2992  | 699.72 | 26.45  | 20.76  |
+| Gradient Boosting      | 0.1784   | 442.49 | 21.04  | 17.10  |
 
-- **R² Score**: 0.2634
-- **MSE**: 396.72
-- **RMSE**: 19.91
-- **MAE**: 15.99
+---
 
-### 5-Fold Cross-Validation:
+### 4. 5-Fold Cross-Validation Results (RMSE)
 
-| Model             | R² Scores                                | Average R² |
-| ----------------- | ----------------------------------------- | ----------- |
-| Linear Regression | [0.2205, 0.2726, 0.3026, 0.0187, -0.1525] | 0.1324      |
-| Ridge Regression  | [0.2203, 0.2726, 0.3035, 0.0186, -0.1506] | 0.1329      |
+| Model                   | RMSE Scores | Mean RMSE | Std. Deviation |
+|------------------------|-------------|-----------|----------------|
+| Linear Regression      | [21.58, 21.57, 20.63, 18.57, 20.75] | 20.62 | 1.10 |
+| Ridge Regression       | [21.55, 21.53, 20.61, 18.56, 20.72] | 20.60 | 1.09 |
+| Decision Tree          | [30.73, 32.09, 30.66, 25.87, 25.47] | 28.97 | 2.74 |
+| Random Forest          | [20.93, 21.94, 21.79, 17.98, 21.55] | 20.84 | 1.47 |
+| Gradient Boosting      | [20.88, 22.58, 21.93, 18.74, 20.45] | 20.92 | 1.32 |
 
-## Key Insights
+---
 
-- The Linear as well as the Ridge regression models performed similarly, capturing only ~26% of the variance in the target variable.
-- The RMSE of 19.91 implies moderately high prediction error, which reflects the limited linear correlation between features and the target.
-- Cross-validation confirmed that both models were  generalized similarly, although some folds showed much lower R² (even negative), indicating variability in feature effectiveness.
+### 5. Key Insights
 
-## Challenges Faced
+- **Ridge Regression** achieved the **lowest mean RMSE (20.60)** with minimal variance, suggesting strong generalization and stability.
+- **Linear Regression** also performed consistently, making it a dependable baseline.
+- **Decision Tree Regression** showed **poor performance** and **overfitting**, with the highest RMSE and variance.
+- Ensemble models like **Random Forest** and **Gradient Boosting** were competitive, though they showed slightly higher variance across folds.
+- Overall, the **low R² scores (~26%)** for linear models imply that only a small portion of `thalch` variance is explained by the available features.
 
-//TODO: 
+---
+
+### 6. Challenges Faced
+
+- **Limited Predictive Power**: Linear models explained only ~26% of the variance in the target variable, suggesting more complex patterns or missing features.
+- **Overfitting in Decision Trees**: The Decision Tree model underperformed, demonstrating high variance and poor generalization on test data.
+- **Missing Data Impact**: Despite imputation, the high percentage of missing values in features like `ca`, `thal`, and `slope` likely reduced model effectiveness.
+- **Feature Engineering Trade-offs**: One-hot encoding expanded dimensionality, increasing complexity. More advanced feature construction (e.g., interaction terms or polynomial features) could help but add overhead.
+
+---
+
+### Conclusion
+
+This phase demonstrated the strengths and limitations of different regression models. While Ridge and ensemble regressors showed promising results, the findings suggest the problem might be better tackled as a classification task or by exploring more complex modeling techniques. This will be addressed in future deliverables.
+
+
 
 # Deliverable 3: Classification, Clustering, and Pattern Mining
 
