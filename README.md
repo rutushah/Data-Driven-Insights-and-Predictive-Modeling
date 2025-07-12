@@ -70,6 +70,51 @@ The data set consists of medical attributes gathered from patients in order to f
 
 # Deliverable 2: Regression Modeling and Performance Evaluation
 
+## Modeling Process
+
+### 1. **Preprocessing and Feature Engineering**
+
+- Unnecessay and irrelevant columns like `id`, `dataset`, and `target` were removed.
+- Mean Strategy is used to fill in the missing values
+- All  the numerical attributes were scaled with the help of  StandardScaler to normalize the input space.
+- Categorical features were detected and one-hot encoded.
+- The final dataset was split into training (80%) and testing (20%) sets.
+
+### 2. **Regression Models Built**
+
+- **Linear Regression**: A baseline regression model used for initial performance evaluation.
+- **Ridge Regression**: A regularized model which adds L2 penalty to reduce model the complexity and improve generalization.
+
+## Linear Regression Results:
+
+- **R² Score**: 0.2630
+- **MSE**: 396.92
+- **RMSE**: 19.92
+- **MAE**: 15.99
+
+### Ridge Regression Results:
+
+- **R² Score**: 0.2634
+- **MSE**: 396.72
+- **RMSE**: 19.91
+- **MAE**: 15.99
+
+### 5-Fold Cross-Validation:
+
+| Model             | R² Scores                                | Average R² |
+| ----------------- | ----------------------------------------- | ----------- |
+| Linear Regression | [0.2205, 0.2726, 0.3026, 0.0187, -0.1525] | 0.1324      |
+| Ridge Regression  | [0.2203, 0.2726, 0.3035, 0.0186, -0.1506] | 0.1329      |
+
+## Key Insights
+
+- The Linear as well as the Ridge regression models performed similarly, capturing only ~26% of the variance in the target variable.
+- The RMSE of 19.91 implies moderately high prediction error, which reflects the limited linear correlation between features and the target.
+- Cross-validation confirmed that both models were  generalized similarly, although some folds showed much lower R² (even negative), indicating variability in feature effectiveness.
+
+## Challenges Faced
+
+//TODO: 
 
 # Deliverable 3: Classification, Clustering, and Pattern Mining
 
@@ -167,13 +212,9 @@ A Decision Tree is a flowchart-like tree structure where:
 
   ```
 
-Summary of decision tree,
-<<<<<<< HEAD
+Summary of decision tree
 
-* We achieved accuracy of : ~79%
-=======
 * We achieved accuracy of: ~79%
->>>>>>> 56fccf0ae59d5acf0aa59543264d942b9c407ebd
 * Confusion matrix, ROC curve, and tree visualization were generated to evaluate performance.
 
 ### 📈 Model Performance Comparison
@@ -185,8 +226,6 @@ Summary of decision tree,
 
 Both models were effective in identifying patients at risk of heart disease,
 with **k-NN showing slightly higher accuracy** in this dataset.
-<<<<<<< HEAD
-=======
 
 ## Hyperparameter Tuning of Classification Models
 
@@ -195,18 +234,18 @@ We performed **hyperparameter tuning** for both **k-Nearest Neighbors (k-NN)** a
 ### k-Nearest Neighbors (k-NN)
 
 - Parameter grid tested:
+
   - `n_neighbors`: [3, 5, 7, 9]
   - `weights`: ['uniform', 'distance']
   - `metric`: ['euclidean', 'manhattan']
-
 - Best Parameters:
+
   - `n_neighbors`: 7
   - `weights`: distance
   - `metric`: manhattan
-
 - Best cross-validated score: **~0.877**
-
 - Final evaluation on test data:
+
   - **Accuracy:** 0.841
   - **Precision:** 0.882
   - **Recall:** 0.882
@@ -215,18 +254,18 @@ We performed **hyperparameter tuning** for both **k-Nearest Neighbors (k-NN)** a
 ### Decision Tree
 
 - Parameter grid tested:
+
   - `max_depth`: [3, 5, 10, None]
   - `min_samples_split`: [2, 5, 10]
   - `criterion`: ['gini', 'entropy']
-
 - Best Parameters:
+
   - `max_depth`: 3
   - `min_samples_split`: 2
   - `criterion`: gini
-
 - Best cross-validated score: **~0.831**
-
 - Final evaluation on test data:
+
   - **Accuracy:** 0.781
   - **Precision:** 0.856
   - **Recall:** 0.814
@@ -234,12 +273,16 @@ We performed **hyperparameter tuning** for both **k-Nearest Neighbors (k-NN)** a
 
 ---
 
-###  Insights for hyperparameter
+### Insights for hyperparameter
+
 - Hyperparameter tuning improved the performance of both models.
 - k-NN achieved higher test accuracy and F1 score compared to Decision Tree on this dataset.
 - ROC curves and confusion matrices were plotted to visualize model performance.
 
-
-
-
 >>>>>>> 56fccf0ae59d5acf0aa59543264d942b9c407ebd
+>>>>>>>
+>>>>>>
+>>>>>
+>>>>
+>>>
+>>
