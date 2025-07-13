@@ -250,7 +250,7 @@ Summary of decision tree
 * We achieved accuracy of: ~79%
 * Confusion matrix, ROC curve, and tree visualization were generated to evaluate performance.
 
-### 📈 Model Performance Comparison
+### Model Performance Comparison
 
 | Model                      | Accuracy |
 | -------------------------- | -------- |
@@ -331,7 +331,6 @@ To visualize the clusters:
 
 The clusters represent distinct patient profiles based on features such as age, blood pressure, cholesterol, etc. These groupings can help medical practitioners target specific risk groups for preventive measures.
 
----
 
 ## Association Rule Mining with FP-Growth
 
@@ -363,8 +362,6 @@ We applied **Frequent Pattern Growth (FP-Growth)** to discover meaningful patter
 
 ![Association Graph](association_rules_graph.png)
 
----
-
 ## Real-World Insights
 
 The discovered patterns highlight important risk factors for heart disease:
@@ -375,8 +372,6 @@ These insights can assist healthcare providers in:
 - Prioritizing screening and intervention for high-risk patients.
 - Designing targeted awareness campaigns and lifestyle interventions.
 - Informing policy decisions on resource allocation for preventive care.
-
----
 
 ## Conclusion
 
