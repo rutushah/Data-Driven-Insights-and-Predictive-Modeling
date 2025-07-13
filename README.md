@@ -371,7 +371,10 @@ Provided actionable insights applicable in medical settings
 
 ### [Presentation Video](https://go.screenpal.com/watch/cTiIo9nl5dk)
 
-### [IPYNB file (residency.ipynb)](https://github.com/rutushah/Data-Driven-Insights-and-Predictive-Modeling/blob/main/residency.ipynb)
+### [IPYNB File (residency.ipynb)](https://github.com/rutushah/Data-Driven-Insights-and-Predictive-Modeling/blob/main/residency.ipynb)
+
+### [Final Report (Residency Project Final.docx)](https://github.com/rutushah/Data-Driven-Insights-and-Predictive-Modeling/blob/main/Reisdency%20Project%20Final.docx)
 
 ### [GitHub Repository](https://github.com/rutushah/Data-Driven-Insights-and-Predictive-Modeling)
+
 
