@@ -311,7 +311,7 @@ To visualize the clusters:
 - Performed PCA to reduce dimensions to 2D.
 - Plotted the clusters using a scatter plot, with cluster centroids marked as black 'X'.
 
-![K-Means Clustering](kmeans_clusters.png)
+![K-Means Clustering](screenshots/kmeans_clusters.png)
 
 The clusters represent distinct patient profiles based on features such as age, blood pressure, cholesterol, etc. These groupings can help medical practitioners target specific risk groups for preventive measures.
 
@@ -344,7 +344,7 @@ We applied **Frequent Pattern Growth (FP-Growth)** to discover meaningful patter
 - **Network Graph:** Directed graph of antecedents → consequent with edge weight representing lift.
 - **Support vs Confidence:** Scatter plot with lift shown as color gradient.
 
-![Association Graph](association_rules_graph.png)
+![Association Graph](screenshots/association_rules_graph.png)
 
 ## Real-World Insights
 
@@ -364,3 +364,9 @@ Developed and visualized a **clustering model (K-Means)**
 Identified and explained patient groups based on feature similarity  
 Applied **FP-Growth** to find significant association rules predicting heart disease  
 Provided actionable insights applicable in medical settings
+
+# Links 
+### Presentation Slide (Residency_weekend_presentation.pptx)
+### Presentation video : (https://go.screenpal.com/watch/cTiIo9nl5dk)
+### IPYNB file : (residency.ipynb)
+### GitHub URL : (https://github.com/rutushah/Data-Driven-Insights-and-Predictive-Modeling)
