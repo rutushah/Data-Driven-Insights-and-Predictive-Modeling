@@ -77,8 +77,6 @@ The data set consists of medical attributes gathered from patients in order to f
 
 In this deliverable, we focused on building and evaluating regression models to predict the target variable (`thalch`) using patient health attributes. The key steps involved data preprocessing, feature engineering, implementation of multiple regression techniques, and performance evaluation using cross-validation.
 
----
-
 ### 1. Preprocessing and Feature Engineering
 
 - Removed unnecessary columns such as `id`, `dataset`, and `target`.
@@ -86,8 +84,6 @@ In this deliverable, we focused on building and evaluating regression models to 
 - Applied **StandardScaler** to normalize numerical attributes.
 - One-hot encoded categorical variables for model compatibility.
 - Split the data into **80% training** and **20% testing** sets.
-
----
 
 ### 2. Regression Models Implemented
 
@@ -99,8 +95,6 @@ In this deliverable, we focused on building and evaluating regression models to 
 | **Random Forest Regressor** | Ensemble method combining multiple trees for stable predictions. |
 | **Gradient Boosting Regressor** | Sequential ensemble that improves iteratively over errors. |
 
----
-
 ### 3. Model Performance (Test Set)
 
 | Model                   | R² Score | MSE    | RMSE   | MAE   |
@@ -109,8 +103,6 @@ In this deliverable, we focused on building and evaluating regression models to 
 | Ridge Regression       | 0.2634   | 396.72 | 19.91  | 15.99  |
 | Decision Tree Regressor| -0.2992  | 699.72 | 26.45  | 20.76  |
 | Gradient Boosting      | 0.1784   | 442.49 | 21.04  | 17.10  |
-
----
 
 ### 4. 5-Fold Cross-Validation Results (RMSE)
 
@@ -122,8 +114,6 @@ In this deliverable, we focused on building and evaluating regression models to 
 | Random Forest          | [20.93, 21.94, 21.79, 17.98, 21.55] | 20.84 | 1.47 |
 | Gradient Boosting      | [20.88, 22.58, 21.93, 18.74, 20.45] | 20.92 | 1.32 |
 
----
-
 ### 5. Key Insights
 
 - **Ridge Regression** achieved the **lowest mean RMSE (20.60)** with minimal variance, suggesting strong generalization and stability.
@@ -132,8 +122,6 @@ In this deliverable, we focused on building and evaluating regression models to 
 - Ensemble models like **Random Forest** and **Gradient Boosting** were competitive, though they showed slightly higher variance across folds.
 - Overall, the **low R² scores (~26%)** for linear models imply that only a small portion of `thalch` variance is explained by the available features.
 
----
-
 ### 6. Challenges Faced
 
 - **Limited Predictive Power**: Linear models explained only ~26% of the variance in the target variable, suggesting more complex patterns or missing features.
@@ -141,13 +129,9 @@ In this deliverable, we focused on building and evaluating regression models to 
 - **Missing Data Impact**: Despite imputation, the high percentage of missing values in features like `ca`, `thal`, and `slope` likely reduced model effectiveness.
 - **Feature Engineering Trade-offs**: One-hot encoding expanded dimensionality, increasing complexity. More advanced feature construction (e.g., interaction terms or polynomial features) could help but add overhead.
 
----
-
 ### Conclusion
 
 This phase demonstrated the strengths and limitations of different regression models. While Ridge and ensemble regressors showed promising results, the findings suggest the problem might be better tackled as a classification task or by exploring more complex modeling techniques. This will be addressed in future deliverables.
-
-
 
 # Deliverable 3: Classification, Clustering, and Pattern Mining
 
