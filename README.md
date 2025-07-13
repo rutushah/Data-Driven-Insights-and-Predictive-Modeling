@@ -365,8 +365,13 @@ Identified and explained patient groups based on feature similarity
 Applied **FP-Growth** to find significant association rules predicting heart disease  
 Provided actionable insights applicable in medical settings
 
-# Links 
-### Presentation Slide (Residency_weekend_presentation.pptx)
-### Presentation video : (https://go.screenpal.com/watch/cTiIo9nl5dk)
-### IPYNB file : (residency.ipynb)
-### GitHub URL : (https://github.com/rutushah/Data-Driven-Insights-and-Predictive-Modeling)
+# Links
+
+### [Presentation Slide (Residency_weekend_presentation.pptx)](https://github.com/rutushah/Data-Driven-Insights-and-Predictive-Modeling/blob/main/Residency_weekend_presentation.pptx)
+
+### [Presentation Video](https://go.screenpal.com/watch/cTiIo9nl5dk)
+
+### [IPYNB file (residency.ipynb)](https://github.com/rutushah/Data-Driven-Insights-and-Predictive-Modeling/blob/main/residency.ipynb)
+
+### [GitHub Repository](https://github.com/rutushah/Data-Driven-Insights-and-Predictive-Modeling)
+
